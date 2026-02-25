@@ -21,6 +21,10 @@ import { AppEnquiryRepository } from "../repository/enquiry"
 import { EnquiryService } from "../services/enquiry"
 import { EnquiryController } from "../controllers/enquiry"
 
+import { AppJobApplicationRepository } from "../repository/jobApplication"
+import { JobApplicationService } from "../services/jobApplication"
+import { JobApplicationController } from "../controllers/jobApplication"
+
 export const loadContainer = (app: Application) => {
     const Container = createContainer({
         injectionMode: 'CLASSIC'
@@ -57,6 +61,10 @@ export const loadContainer = (app: Application) => {
         enquiryRepository: asClass(AppEnquiryRepository).scoped(),
         enquiryService: asClass(EnquiryService).scoped(),
         enquiryController: asClass(EnquiryController).scoped(),
+
+        jobApplicationRepository: asClass(AppJobApplicationRepository).scoped(),
+        jobApplicationService: asClass(JobApplicationService).scoped(),
+        jobApplicationController: asClass(JobApplicationController).scoped(),
     })
 
     const logger = Container.resolve<Logger>("logger")
@@ -75,7 +83,7 @@ export const loadContainer = (app: Application) => {
     if (appConfig.isTesting) {
         app.listen(0, () => { })
     } else {
-        const port = process.env.PORT || 3000
+        const port = process.env.PORT || 5000
         app.listen(port, () => {
             logger.info(`Server now listening at localhost:${port}`)
             Container.resolve<MongoManager>('mongoManager')

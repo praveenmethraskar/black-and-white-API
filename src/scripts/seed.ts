@@ -88,7 +88,7 @@ async function seed() {
 
     console.log('\n--- SEED COMPLETE ---')
     console.log('Login credentials for Postman:')
-    console.log('  POST http://localhost:3000/api/user/login')
+    console.log('  POST http://localhost:5000/api/user/login')
     console.log('  Body: { "email": "superadmin@blackandwhite.com", "password": "Admin@1234" }')
 
     await mongoose.disconnect()
