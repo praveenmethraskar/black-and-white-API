@@ -4,7 +4,7 @@ import { APIError } from '../errors/api'
 
 export class EnquiryController {
 
-    constructor(private enquiryService: EnquiryService) {}
+    constructor(private enquiryService: EnquiryService) { }
 
     // POST /api/enquiry  — public, no auth
     async createEnquiry(req: Request, res: Response): Promise<void> {

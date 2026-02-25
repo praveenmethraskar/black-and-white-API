@@ -29,7 +29,7 @@ export function success(res: Response, response: object): void {
  * @returns {void} - Sends the error response to the client.
  */
 export function interceptor(
-    err: APIError | Error ,
+    err: APIError | Error,
     req: Request,
     res: Response,
     next: NextFunction
@@ -42,7 +42,7 @@ export function interceptor(
             message: err.message,
             details: err.details
         })
-    }  else {
+    } else {
         // Default handler for unexpected errors
         res.status(500).json({
             code: 'INTERNAL_SERVER_ERROR',

@@ -56,7 +56,7 @@ export class UserService {
         const expiresIn = process.env.JWT_EXPIRES_ADMIN || '1h'
         const token = jwt.sign(payload, secret, { expiresIn } as jwt.SignOptions)
 
-        this.userRepository.updateLastLogin(userId).catch(() => {})
+        this.userRepository.updateLastLogin(userId).catch(() => { })
 
         return {
             token,

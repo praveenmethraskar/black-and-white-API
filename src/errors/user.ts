@@ -7,7 +7,7 @@ export const SUPPORT_USER_ERRORS: Record<string, ApiError> = {
         code: "I01",
         message: "Invalid Role",
         statusCode: 404,
-      },
+    },
     UNAUTHORIZED_ROLE: {
         code: "U01",
         message: 'Unauthorized Role',

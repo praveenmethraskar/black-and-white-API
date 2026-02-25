@@ -7,7 +7,7 @@ import { SupportRole } from '../model/enums/supportRole'
 
 @route('/api/enquiry')
 export class EnquiryRoutes {
-    constructor(private enquiryController: EnquiryController) {}
+    constructor(private enquiryController: EnquiryController) { }
 
     // POST /api/enquiry  — public, no auth required
     @route('/')

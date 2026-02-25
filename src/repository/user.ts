@@ -1,11 +1,11 @@
 import { User, UserSchema } from './schema/user'
 
-export interface UserRepository{
-findByEmail(email: string): Promise<User | null>
+export interface UserRepository {
+    findByEmail(email: string): Promise<User | null>
 
-findById(id: string): Promise<User | null>
+    findById(id: string): Promise<User | null>
 
-updateLastLogin(id: string): Promise<void> 
+    updateLastLogin(id: string): Promise<void>
 }
 
 export class AppUserRepository implements UserRepository {

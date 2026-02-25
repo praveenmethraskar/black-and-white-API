@@ -12,7 +12,7 @@ declare global {
 }
 
 export class UserController {
-    constructor(private userService: UserService) {}
+    constructor(private userService: UserService) { }
 
     async login(req: Request, res: Response, next: NextFunction): Promise<void> {
         try {

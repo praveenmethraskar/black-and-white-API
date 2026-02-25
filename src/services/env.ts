@@ -305,7 +305,7 @@ export class AppEnvService implements EnvService {
         return this.get<string>('MSG91_AUTH_KEY', true)
     }
 
-     public get msg91OtpTemplateId(): string {
+    public get msg91OtpTemplateId(): string {
         return this.get<string>('MSG91_OTP_TEMPLATE_ID', true)
     }
 

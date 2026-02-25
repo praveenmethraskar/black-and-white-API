@@ -5,7 +5,7 @@ import { APIError } from '../errors/api'
 
 export class EnquiryService {
 
-    constructor(private enquiryRepository: EnquiryRepository) {}
+    constructor(private enquiryRepository: EnquiryRepository) { }
 
     async createEnquiry(data: EnquiryRequest): Promise<EnquiryResponse> {
         const enquiry = await this.enquiryRepository.create(data)
